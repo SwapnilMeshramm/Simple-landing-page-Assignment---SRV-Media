@@ -1,0 +1,391 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  color: #1f2933;
+  line-height: 1.5;
+}
+
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  background: #0f2a44;
+  color: #fff;
+  padding: 8px 12px;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* HEADER */
+.header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  z-index: 10;
+}
+.header__container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  font-weight: bold;
+  color: #0f2a44;
+}
+.header__cta {
+  background: #0f2a44;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.header__cta:hover,
+.header__cta:focus {
+  background: #163a5f;
+}
+
+/* HERO */
+.hero {
+  overflow: hidden;
+  background: linear-gradient(180deg, #3b1a6b, #1a103d);
+  color: #fff;
+  position: relative;
+}
+.hero__track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+.hero__slide {
+  min-width: 100%;
+  padding: 5rem 1rem;
+  text-align: center;
+}
+.hero__slide h1,
+.hero__slide p {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.6s;
+}
+.hero__slide.active h1,
+.hero__slide.active p {
+  transform: translateY(0);
+  opacity: 1;
+}
+.hero__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+.hero__nav--prev {
+  left: 10px;
+}
+.hero__nav--next {
+  right: 10px;
+}
+
+/* LOGOS */
+.logos {
+  background: #ffffff;
+  padding: 3rem 0;
+  overflow: hidden;
+}
+
+.logos__title {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #0f2a44;
+  margin-bottom: 3rem;
+}
+
+/* VIEWPORT */
+.logos__row {
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+/* MOVING TRACK */
+.logos__track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: sling 25s linear infinite;
+}
+
+/* ALTERNATE DIRECTION */
+.logos__row--rtl .logos__track {
+  animation-direction: reverse;
+}
+
+
+.logo-card {
+  width: 220px;
+  height: 130px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  flex-shrink: 0;
+}
+
+.logo-card img {
+  max-width: 100%;
+  max-height: 90px;
+  object-fit: contain;
+}
+
+/* PAUSE ON HOVER & KEYBOARD FOCUS */
+.logos__row:hover .logos__track,
+.logos__row:focus-within .logos__track {
+  animation-play-state: paused;
+}
+
+/* CONTINUOUS SLING */
+@keyframes sling {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ACCESSIBILITY: REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+  .logos__track {
+    animation: none;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .logo-card {
+    width: 180px;
+    height: 110px;
+  }
+  .logo-card img {
+    max-height: 70px;
+  }
+}
+
+
+/* CHOOSE SCHOOL */
+.schools {
+  max-width: 1300px;
+  margin: auto;
+  padding: 4rem 1rem;
+}
+
+
+.schools__title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2b1d5c;
+  margin-bottom: 3rem;
+}
+
+
+.schools__track {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+
+.school-card {
+  position: relative;
+  height: 420px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+
+.school-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.school-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.2));
+  color: #fff;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.school-card__overlay h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.school-card__overlay p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* DOTS */
+.schools__dots {
+  text-align: center;
+  margin-top: 1.5rem;
+  display: none;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #2b1d5c;
+}
+
+/* MOBILE SLIDER */
+@media (max-width: 768px) {
+  .schools__track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+
+  .school-card {
+    min-width: 85%;
+    scroll-snap-align: center;
+    height: 380px;
+  }
+
+  .schools__dots {
+    display: block;
+  }
+}
+
+
+/* EXHIBITION */
+.exhibition {
+  background: linear-gradient(180deg, #3b1a6b, #1a103d);
+  padding: 4rem 1rem;
+  overflow: hidden;
+}
+
+.exhibition h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+.exhibition__carousel {
+  overflow: hidden;
+}
+
+.exhibition__track {
+  display: flex;
+  gap: 1.5rem;
+  will-change: transform;
+}
+
+.exhibition__card {
+  min-width: 300px;
+  max-width: 300px;
+  height: 260px;
+  background: #eadcff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.exhibition__card h3 {
+  font-size: 1.05rem;
+  color: #2c145a;
+}
+
+.exhibition__card p {
+  font-size: 0.95rem;
+  color: #3f2b72;
+  line-height: 1.5;
+}
+
+/* SVG ICON */
+.icon {
+  width: 36px;
+  height: 36px;
+  stroke: #7a4be8;
+  stroke-width: 1.8;
+  fill: none;
+}
+
+
+
+/* MOBILE SWIPE */
+@media (max-width: 768px) {
+
+  .exhibition__carousel {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .exhibition__track {
+    transform: none !important;
+    animation: none !important;
+    width: max-content;
+    scroll-snap-type: x mandatory;
+  }
+
+  .exhibition__card {
+    scroll-snap-align: center;
+  }
+}
+
+
+
+
+/* FOOTER */
+.footer {
+  background: #1a0f44;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premier Schools Exhibition</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header__container">
+    <div class="header__logo">PSE</div>
+    <a href="#" class="header__cta">Register</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO SECTION -->
+  <section class="hero" aria-label="Hero Slider">
+    <div class="hero__slider" role="region" aria-roledescription="carousel">
+
+      <div class="hero__track">
+        <div class="hero__slide active">
+          <h1 class="hero__title">Premier Schools Exhibition</h1>
+          <p class="hero__text">Discover the best schools for your child’s future.</p>
+        </div>
+        <div class="hero__slide">
+          <h1 class="hero__title">Meet Top Educators</h1>
+          <p class="hero__text">Direct interaction with school representatives.</p>
+        </div>
+        <div class="hero__slide">
+          <h1 class="hero__title">Admissions & Guidance</h1>
+          <p class="hero__text">On-the-spot counselling and admission support.</p>
+        </div>
+      </div>
+
+      <button class="hero__nav hero__nav--prev" aria-label="Previous slide">‹</button>
+      <button class="hero__nav hero__nav--next" aria-label="Next slide">›</button>
+    </div>
+  </section>
+
+  <!-- PARTICIPATING SCHOOL LOGOS -->
+<section class="logos" aria-label="Participating School Logos">
+  <h2 class="logos__title">Participating Schools</h2>
+
+  <!-- Left to Right -->
+  <div class="logos__row logos__row--ltr">
+    <div class="logos__track">
+      <div class="logo-card"><img src="./assets/logo1.jpeg" alt="School 1"></div>
+      <div class="logo-card"><img src="./assets/logo2.jpg" alt="School 2"></div>
+      <div class="logo-card"><img src="./assets/logo3.png" alt="School 3"></div>
+      <div class="logo-card"><img src="./assets/logo4.jpeg" alt="School 4"></div>
+
+      <!-- Duplicate for infinite loop -->
+      <div class="logo-card"><img src="./assets/logo1.jpeg" alt=""></div>
+      <div class="logo-card"><img src="./assets/logo2.jpg" alt=""></div>
+      <div class="logo-card"><img src="./assets/logo3.png" alt=""></div>
+      <div class="logo-card"><img src="./assets/logo4.jpeg" alt=""></div>
+    </div>
+  </div>
+
+  <!-- Right to Left -->
+  <div class="logos__row logos__row--rtl">
+    <div class="logos__track">
+      <div class="logo-card"><img src="./assets/logo5.png" alt="School 5"></div>
+      <div class="logo-card"><img src="./assets/logo6.png" alt="School 6"></div>
+      <div class="logo-card"><img src="./assets/logo7.png" alt="School 7"></div>
+      <div class="logo-card"><img src="./assets/logo1.jpeg" alt="School 8"></div>
+
+      <!-- Duplicate -->
+      <div class="logo-card"><img src="./assets/logo5.png" alt=""></div>
+      <div class="logo-card"><img src="./assets/logo6.png" alt=""></div>
+      <div class="logo-card"><img src="./assets/logo7.png" alt=""></div>
+      <div class="logo-card"><img src="./assets/logo1.jpeg" alt=""></div>
+    </div>
+  </div>
+
+</section>
+
+
+ <!-- CHOOSE THE SCHOOL -->
+<section class="schools" aria-label="Choose the School That Fits You Best">
+
+  <h2 class="schools__title">Choose the School That Fits You Best</h2>
+
+  <div class="schools__carousel" role="region" aria-roledescription="carousel">
+    <div class="schools__track">
+
+      <!-- CARDs -->
+      <div class="school-card">
+        <img src="./assets/img1.jpeg" alt="Pre Schools">
+        <div class="school-card__overlay">
+          <h3>Pre-Schools & Early Learning Centres</h3>
+          <p>Nurturing foundational skills for toddlers and pre-primary children.</p>
+        </div>
+      </div>
+
+      
+      <div class="school-card">
+        <img src="./assets/img2.jpeg" alt="CBSE Schools">
+        <div class="school-card__overlay">
+          <h3>K–12 CBSE Day Schools</h3>
+          <p>Reputed schools offering complete schooling from Kindergarten to Grade 12.</p>
+        </div>
+      </div>
+
+   
+      <div class="school-card">
+        <img src="./assets/img3.avif" alt="Heritage Schools">
+        <div class="school-card__overlay">
+          <h3>Heritage to New-Age Schools</h3>
+          <p>Time-tested schools to innovative pedagogy, tech-enabled future-ready schools.</p>
+        </div>
+      </div>
+
+      
+      <div class="school-card">
+        <img src="./assets/img4.jpeg" alt="International Schools">
+        <div class="school-card__overlay">
+          <h3>International Curriculum Schools</h3>
+          <p>Offering IB, Cambridge, Finnish and other global curricula.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- DOTS (MOBILE ONLY) -->
+    <div class="schools__dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
+</section>
+
+
+<section class="exhibition" aria-label="What Makes This Exhibition a Must-Visit">
+  <h2>What Makes This Exhibition a Must-Visit</h2>
+
+  <div class="exhibition__carousel" role="region" aria-roledescription="carousel">
+    <div class="exhibition__track">
+
+      <article class="exhibition__card" tabindex="0">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 12a4 4 0 100-8 4 4 0 000 8zM4 20a8 8 0 0116 0"/>
+        </svg>
+        <h3>Interact Directly with School Heads</h3>
+        <p>Get answers straight from the experts</p>
+      </article>
+
+      <article class="exhibition__card" tabindex="0">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 2h9l3 3v17H6zM9 9h6M9 13h6"/>
+        </svg>
+        <h3>Compare Curriculum & Pedagogy</h3>
+        <p>Understand CBSE, ICSE, IB, Cambridge, Finnish & more</p>
+      </article>
+
+      <article class="exhibition__card" tabindex="0">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2l3 6 6 1-4.5 4 1 6-5.5-3-5.5 3 1-6L3 9l6-1z"/>
+        </svg>
+        <h3>Get Exclusive Fee Structures & Offers</h3>
+        <p>Access transparent information and avail offers</p>
+      </article>
+
+      <article class="exhibition__card" tabindex="0">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 10l9-7 9 7v10H3zM9 22v-6h6v6"/>
+        </svg>
+        <h3>Explore Schools Offerings</h3>
+        <p>Infrastructure, co-curriculars, methodology & culture</p>
+      </article>
+
+      <article class="exhibition__card" tabindex="0">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M16 11c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zM8 11c1.7 0 3-1.3 3-3S9.7 5 8 5 5 6.3 5 8s1.3 3 3 3zM2 22a6 6 0 0112 0M14 22a6 6 0 0112 0"/>
+        </svg>
+        <h3>On-the-Spot Admissions & Counselling</h3>
+        <p>Instant applications and expert guidance</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  © 2026 Premier Schools Exhibition
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
